@@ -24,6 +24,9 @@ class HomePage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final item = items[index];
                   return InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context, '/item', arguments: item);
+                  },                    
                     child: Card(
                         child: Container(
                             margin: EdgeInsets.all(8),
@@ -38,12 +41,7 @@ class HomePage extends StatelessWidget {
                               ],
                             ))),
                   );
-                  return InkWell(
-                  onTap: (){
-                    Navigator.pushNamed(context, '/item', arguments: item);
-                  },
-                );
-
+  
                 }))
  
                
