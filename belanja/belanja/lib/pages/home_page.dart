@@ -10,11 +10,9 @@ class HomePage extends StatelessWidget {
   ];
 
   Widget build(BuildContext context) {
-    //TODO: implement build
-   // throw UnimplementedError();
     return Scaffold(
         appBar: AppBar(
-          title: Text("AAAA"),
+          title: Text("Barang"),
         ),
         body: Container(
             margin: EdgeInsets.all(8),
@@ -23,10 +21,10 @@ class HomePage extends StatelessWidget {
                 itemCount: items.length,
                 itemBuilder: (context, index) {
                   final item = items[index];
-                  return InkWell(
-                  onTap: (){
-                    Navigator.pushNamed(context, '/item', arguments: item);
-                  },                    
+                    return InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, '/item', arguments: item);
+                    },
                     child: Card(
                         child: Container(
                             margin: EdgeInsets.all(8),
@@ -41,17 +39,6 @@ class HomePage extends StatelessWidget {
                               ],
                             ))),
                   );
-  
-                }))
- 
-               
-                
-                );
-
-
+                })));
   }
-
-
-
-
 }
